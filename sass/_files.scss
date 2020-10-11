@@ -13,6 +13,8 @@
     padding: 5vmin;
     background-color: var(--color-background);
     text-align: center;
+
+    // TODO: Restyle this.
     border: 4px dashed var(--color-primary);
     border-top-left-radius: 60px;
     border-bottom-right-radius: 60px;
@@ -20,6 +22,7 @@
     a:not(:last-child) {
       margin: 0.5rem;
 
+      // TODO: Check what this does.
       &:not(.link-codepen) {
         font-size: clamp(1.5rem, 4vw, 2rem);
       }

@@ -11,6 +11,7 @@
   h3 {
     display: inline-block;
     transform: rotate(-8deg) translateX(-10%);
+    // TODO: Update this gradient.
     background: #FF4E50;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #ff4e50, #fe8c00);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #ff4e50, #fe8c00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
