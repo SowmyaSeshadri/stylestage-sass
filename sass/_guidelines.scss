@@ -1,9 +1,20 @@
 #guidelines {
+  .container {
+    h2 {
+      padding-left: 0;
+    }
+    a {
+      align-self: center;
+      margin-top: 20px;
+    }
+  }
   h3 {
     display: inline-block;
     transform: rotate(-8deg) translateX(-10%);
-    background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
-
+    background: #FF4E50;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ff4e50, #fe8c00);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ff4e50, #fe8c00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
     @supports (background-clip: text) or (-webkit-background-clip: text) {
       -webkit-background-clip: text;
       background-clip: text;
@@ -35,7 +46,19 @@
     }
   }
 
-  .container > a {
-    align-self: center;
+
+  @media (min-width: 769px) {
+    .container {
+      max-width: 90ch;
+      margin-left: 3rem;
+
+      h2 {
+        align-self: flex-start;
+      }
+
+      a {
+        align-self: flex-start;
+      }
+    }
   }
 }
