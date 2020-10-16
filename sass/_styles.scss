@@ -11,11 +11,22 @@
   li {
     display: grid;
     position: relative;
-    place-content: center;
+    place-content: end;
     min-height: 12rem;
     padding: 1rem;
     color: var(--color-primary);
     text-align: center;
+    transition: 0.2s all;
+
+    @media (max-width: 768px) {
+      place-content: center;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+      z-index: 1;
+    }
+    
 
     > span {
       display: grid;
@@ -25,6 +36,7 @@
       border: 1px solid var(--color-primary);
       background-color: var(--color-secondary);
       line-height: 1.1;
+      border-radius: 5px;
 
       a {
         color: inherit;
@@ -55,6 +67,9 @@
   text-align: center;
   background-color: var(--color-background);
   margin-bottom: 5vh;
+  .container {
+    max-width: 85ch;
+  }
   h2 {
     color: var(--color-primary);
   }

@@ -1,7 +1,21 @@
 #contribute {
   background-color: var(--color-light);
 
+  section:nth-child(2) {
+    li a {
+       font-weight: 700;
+    }
+  }
+
   @media (min-width: 769px) {
+    section:nth-child(2) {
+      h3 {
+        padding: 20px;
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
+        background-color: var(--color-background);
+      }
+    }
     .container {
       margin-left: 3rem;
       padding-left: 0;
