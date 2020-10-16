@@ -60,10 +60,10 @@
 
   @media (min-width: 769px) {
     .container {
-      max-width: 90ch;
-      margin-left: 3rem;
+      max-width: 80ch;
+      margin-left: 3vw;
       blockquote {
-        margin-left: 2rem;
+        margin-left: 2vw;
       }
       h2 {
         align-self: flex-start;
@@ -76,6 +76,12 @@
       ul {
         justify-content: flex-start;
       }
+    }
+  }
+
+  @media (min-width: 770px) and (max-width: 999px) {
+    .container {
+      max-width: 75ch;
     }
   }
 }
