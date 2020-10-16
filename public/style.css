@@ -314,7 +314,7 @@ nav ul a:hover::before, nav ul a:focus::before {
 nav ul li {
   margin: 0.25rem;
 }
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   nav ul {
     display: flex;
     flex-wrap: wrap;
@@ -378,11 +378,11 @@ nav ul li {
 }
 @media (min-width: 769px) {
   #about .container {
-    max-width: 90ch;
-    margin-left: 3rem;
+    max-width: 80ch;
+    margin-left: 3vw;
   }
   #about .container blockquote {
-    margin-left: 2rem;
+    margin-left: 2vw;
   }
   #about .container h2 {
     align-self: flex-start;
@@ -392,6 +392,11 @@ nav ul li {
   }
   #about section:nth-child(2) ul {
     justify-content: flex-start;
+  }
+}
+@media (min-width: 770px) and (max-width: 999px) {
+  #about .container {
+    max-width: 75ch;
   }
 }
 
@@ -444,8 +449,8 @@ nav ul li {
 }
 @media (min-width: 769px) {
   #guidelines .container {
-    max-width: 90ch;
-    margin-left: 3rem;
+    max-width: 80ch;
+    margin-left: 3vw;
   }
   #guidelines .container h2 {
     align-self: flex-start;
@@ -469,7 +474,7 @@ nav ul li {
     background-color: var(--color-background);
   }
   #contribute .container {
-    margin-left: 3rem;
+    margin-left: 3vw;
     padding-left: 0;
     padding-bottom: 0;
   }
@@ -695,6 +700,13 @@ nav ul li {
 .page-footer ul a.link-twittercontact, .page-footer ul a.link-github, .page-footer ul a.link-rss, .page-footer ul a.link-support {
   border-top-left-radius: 0px;
   border-bottom-right-radius: 0px;
+  border: 1px solid var(--color-background);
+  background-color: inherit;
+  color: var(--color-background);
+}
+.page-footer ul a.link-twittercontact:focus, .page-footer ul a.link-twittercontact:hover, .page-footer ul a.link-github:focus, .page-footer ul a.link-github:hover, .page-footer ul a.link-rss:focus, .page-footer ul a.link-rss:hover, .page-footer ul a.link-support:focus, .page-footer ul a.link-support:hover {
+  background-color: var(--color-background);
+  color: var(--color-primary);
 }
 .page-footer p:first-child {
   margin-top: 3rem;
@@ -718,8 +730,8 @@ nav ul li {
   left: -10000px;
   width: 1px;
   height: 1px;
-  background-color: var(--color-secondary);
-  color: #fff;
+  background-color: var(--color-primary);
+  color: var(--color-background);
   font-size: 1.125rem;
   overflow: hidden;
 }
@@ -755,14 +767,17 @@ nav ul li {
   border-top-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
-[class^=link]:not(.link-codepen):hover,
-.profile .container > a:hover {
+[class^=link]:not(.link-codepen):hover, [class^=link]:not(.link-codepen):focus-within,
+.profile .container > a:hover,
+.profile .container > a:focus-within {
   border-radius: 0;
 }
-[class^=link]:not(.link-codepen):focus,
-.profile .container > a:focus {
+[class^=link]:not(.link-codepen):focus, [class^=link]:not(.link-codepen):focus-within,
+.profile .container > a:focus,
+.profile .container > a:focus-within {
   outline-color: transparent;
   outline-style: solid;
+  transform: translateY(-5px);
 }
 
 .page-footer [class^=link] {
